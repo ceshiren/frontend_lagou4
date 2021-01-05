@@ -1,5 +1,5 @@
 <template>
-<v-app>
+
   <v-data-table
     :headers="headers"
     :items="desserts"
@@ -150,12 +150,12 @@
       </v-btn>
     </template>
   </v-data-table>
-</v-app>
 </template>
 
 
 <script>
   export default {
+      'name': 'TestCase',
     data: () => ({
       dialog: false,
       dialogDelete: false,
