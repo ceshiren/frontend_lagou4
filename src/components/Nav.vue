@@ -35,6 +35,7 @@
         <v-list-item
           v-for="child in item.items"
           :key="child.title"
+          :to="child.to"
         >
           <v-list-item-content>
             <v-list-item-title v-text="child.title"></v-list-item-title>
@@ -51,18 +52,20 @@
       items: [
         {
           action: 'mdi-ticket',
-          items: [{ title: 'List Item' }],
-          title: 'Attractions',
+          active: true,
+          items: [
+            { title: '测试用例管理', to: '/testcase' },
+            { title: '测试用例分组', to: '/'  }
+            ],
+          title: '测试用例',
         },
         {
           action: 'mdi-silverware-fork-knife',
-          active: true,
+          
           items: [
-            { title: 'Breakfast & brunch' },
-            { title: 'New American' },
-            { title: 'Sushi' },
+            { title: '测试报告管理' },
           ],
-          title: 'Dining',
+          title: '测试报告',
         },
         {
           action: 'mdi-school',
